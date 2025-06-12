@@ -4,17 +4,51 @@
 
 
 
-# Rigging packs
+# Rigging pack
 
 The assets in these packs are community made and can be used for free in dave. They are meant primarily as example or as starting point for your own models. You should not assume that anything in these assets is physically correct.
 
-## Cranes
+## Installation
 
-Contains a number of example cranes and hoists.
+### Step 1: Download
 
-## Shackle alternatives
+![image-20250612154701179](./image-20250612154701179.png)
+
+After downloading, extract the .zip file to a local or network folder.
+
+(Git addicts may off course also clone the repository)
+
+### Step 2: Register in dave
+
+In dave, open file -> settings and then activate the "Resource Folders" tab.
+
+Then drag and drop the dave.library file into the "user defined libraries" list.
+
+Do this for each of the libraries that you want to use.
+
+![image-20250612155041048](./image-20250612155041048.png)
+
+Click "Save" and you are ready to go!
+
+
+
+## Shackles
+
+Shackles contains the Green Pin and Crossby standard and wide body/sling shackles. Only four distinct visuals are used. These visuals are scaled to (approximately) match the selected shackle kind.
+
+![image-20250612155844199](./image-20250612155844199.png)
+
+The library currently contains the P-6036, P6033, CA and CWB series.
+
+
+
+## Connectors (Shackle alternatives)
 
 Contains a number of shackle alternatives such as link-plates and rov shank hooks.
+
+This is mainly to show how other types of connectors can be models as a shackle.
+
+![image-20250612160358277](./image-20250612160358277.png)
 
 ## Attributions
 
@@ -38,7 +72,7 @@ traceparts: free to use and re-distribute: They are provided "For information on
 
 ## Cranes
 
-
+Contains a number of example cranes and hoists.
 
 ### Crawler crane and hoist
 

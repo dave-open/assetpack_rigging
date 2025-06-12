@@ -1,0 +1,3 @@
+Name,Description,WLL [t],MBL [t],weight [kg],pin diameter [mm],bow diameter [mm],inside length [mm],bow inside diameter [mm],visual,visual scale
+Link2400,BigLink Linkplate 2400t/0.8m,2400,7200,11.83,800,800,800,0,res: connectors/Linkplate.glb,1
+GR8,P-6740 Green Pin ROV Shank Hook E GR8,80,320,0.11,130,45,855,90,res: connectors/gpsh0080rov.glb,1
