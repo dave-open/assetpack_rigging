@@ -1,0 +1,664 @@
+# Auto-generated Python code
+# By ruben
+# Time: 2025-05-16 13:18:04 UTC
+
+# To be able to distinguish the important number (eg: fixed positions) from
+# non-important numbers (eg: a position that is solved by the static solver) we use a dummy-function called 'solved'.
+# For anything written as solved(number) that actual number does not influence the static solution
+
+def solved(number):
+    return number
+
+
+# Environment settings
+s.g = 9.80665
+s.waterlevel = 0.0
+s.rho_air = 0.00126
+s.rho_water = 1.025
+s.wind_direction = 0.0
+s.wind_velocity = 0.0
+s.current_direction = 0.0
+s.current_velocity = 0.0
+
+
+
+# code for Upper_block
+s.new_rigidbody(name='Upper_block',
+                mass=100,
+                cog=(0,
+                     0,
+                     0),
+           position=(solved(0.0),
+                     solved(0.0),
+                     solved(-4.970064714248514)),
+           rotation=(solved(0),
+                     solved(0),
+                     solved(0)),
+           fixed =(False, False, False, False, False, False),
+                )
+
+# code for crane-tip
+s.new_frame(name='crane-tip',
+           position=(0,
+                     0,
+                     0),
+           rotation=(0,
+                     0,
+                     0),
+           fixed =(True, True, True, True, True, True),
+            )
+
+# Rigging Analysis
+ra = RiggingAnalysis(s, "Rigging Analysis")
+ra.enforce_dual_crane = False
+ra.dual_crane_tilt_axis = "y"
+
+# code for Upper_visual
+s.new_visual(name='Upper_visual',
+            parent='Upper_block',
+            path=r'res: revolving crane/r7000_hoist_upper.glb',
+            offset=(0, 0, 1.2), 
+            rotation=(0, 0, 90), 
+            scale=(1.15, 1.15, 1.15) )
+
+# code for Point
+s.new_point(name='Point',
+          parent='Upper_block',
+          position=(0,
+                    -4,
+                    1.5))
+
+# code for Point2
+s.new_point(name='Point2',
+          parent='Upper_block',
+          position=(0,
+                    -3.5,
+                    1.5))
+
+# code for Point3
+s.new_point(name='Point3',
+          parent='Upper_block',
+          position=(0,
+                    -3,
+                    1.5))
+
+# code for Point4
+s.new_point(name='Point4',
+          parent='Upper_block',
+          position=(0,
+                    -2.5,
+                    1.5))
+
+# code for Point5
+s.new_point(name='Point5',
+          parent='Upper_block',
+          position=(0,
+                    -2,
+                    1.5))
+
+# code for Point6
+s.new_point(name='Point6',
+          parent='Upper_block',
+          position=(0,
+                    -1.5,
+                    1.5))
+
+# code for Point7
+s.new_point(name='Point7',
+          parent='Upper_block',
+          position=(0,
+                    1.5,
+                    1.5))
+
+# code for Point8
+s.new_point(name='Point8',
+          parent='Upper_block',
+          position=(0,
+                    2,
+                    1.5))
+
+# code for Point9
+s.new_point(name='Point9',
+          parent='Upper_block',
+          position=(0,
+                    2.5,
+                    1.5))
+
+# code for Point10
+s.new_point(name='Point10',
+          parent='Upper_block',
+          position=(0,
+                    3,
+                    1.5))
+
+# code for Point11
+s.new_point(name='Point11',
+          parent='Upper_block',
+          position=(0,
+                    3.5,
+                    1.5))
+
+# code for Point12
+s.new_point(name='Point12',
+          parent='Upper_block',
+          position=(0,
+                    4,
+                    1.5))
+
+# code for Mid_part
+s.new_rigidbody(name='Mid_part',
+                mass=0,
+                cog=(0,
+                     0,
+                     0),
+                parent='Upper_block',
+           position=(0,
+                     0,
+                     -1.15),
+           rotation=(0,
+                     solved(25),
+                     0),
+           fixed =(True, True, True, True, False, True),
+                )
+
+# code for start_point
+s.new_point(name='start_point',
+          parent='crane-tip',
+          position=(1,
+                    -4,
+                    0))
+
+# code for Point14
+s.new_point(name='Point14',
+          parent='crane-tip',
+          position=(1,
+                    -3.5,
+                    0))
+
+# code for Point15
+s.new_point(name='Point15',
+          parent='crane-tip',
+          position=(1,
+                    -3,
+                    0))
+
+# code for Point16
+s.new_point(name='Point16',
+          parent='crane-tip',
+          position=(1,
+                    -2.5,
+                    0))
+
+# code for Point17
+s.new_point(name='Point17',
+          parent='crane-tip',
+          position=(1,
+                    -2,
+                    0))
+
+# code for Point18
+s.new_point(name='Point18',
+          parent='crane-tip',
+          position=(1,
+                    -1.5,
+                    0))
+
+# code for Point19
+s.new_point(name='Point19',
+          parent='crane-tip',
+          position=(1,
+                    1.5,
+                    0))
+
+# code for Point20
+s.new_point(name='Point20',
+          parent='crane-tip',
+          position=(1,
+                    2,
+                    0))
+
+# code for Point21
+s.new_point(name='Point21',
+          parent='crane-tip',
+          position=(1,
+                    2.5,
+                    0))
+
+# code for Point22
+s.new_point(name='Point22',
+          parent='crane-tip',
+          position=(1,
+                    3,
+                    0))
+
+# code for Point23
+s.new_point(name='Point23',
+          parent='crane-tip',
+          position=(1,
+                    3.5,
+                    0))
+
+# code for Point24
+s.new_point(name='Point24',
+          parent='crane-tip',
+          position=(1,
+                    4,
+                    0))
+
+# code for Point25
+s.new_point(name='Point25',
+          parent='crane-tip',
+          position=(-1,
+                    -4,
+                    0))
+
+# code for Point26
+s.new_point(name='Point26',
+          parent='crane-tip',
+          position=(-1,
+                    -3.5,
+                    0))
+
+# code for Point27
+s.new_point(name='Point27',
+          parent='crane-tip',
+          position=(-1,
+                    -3,
+                    0))
+
+# code for Point28
+s.new_point(name='Point28',
+          parent='crane-tip',
+          position=(-1,
+                    -2.5,
+                    0))
+
+# code for Point29
+s.new_point(name='Point29',
+          parent='crane-tip',
+          position=(-1,
+                    -2,
+                    0))
+
+# code for Point30
+s.new_point(name='Point30',
+          parent='crane-tip',
+          position=(-1,
+                    -1.5,
+                    0))
+
+# code for Point31
+s.new_point(name='Point31',
+          parent='crane-tip',
+          position=(-1,
+                    1.5,
+                    0))
+
+# code for Point32
+s.new_point(name='Point32',
+          parent='crane-tip',
+          position=(-1,
+                    2,
+                    0))
+
+# code for Point33
+s.new_point(name='Point33',
+          parent='crane-tip',
+          position=(-1,
+                    2.5,
+                    0))
+
+# code for Point34
+s.new_point(name='Point34',
+          parent='crane-tip',
+          position=(-1,
+                    3,
+                    0))
+
+# code for Point35
+s.new_point(name='Point35',
+          parent='crane-tip',
+          position=(-1,
+                    3.5,
+                    0))
+
+# code for Point36
+s.new_point(name='Point36',
+          parent='crane-tip',
+          position=(-1,
+                    4,
+                    0))
+
+# code for Circle
+c = s.new_circle(name='Circle',
+            parent='Point',
+            axis=(0, 1, 0),
+            radius=1 )
+
+# code for Circle2
+c = s.new_circle(name='Circle2',
+            parent='Point2',
+            axis=(0, 1, 0),
+            radius=1 )
+
+# code for Circle3
+c = s.new_circle(name='Circle3',
+            parent='Point3',
+            axis=(0, 1, 0),
+            radius=1 )
+
+# code for Circle4
+c = s.new_circle(name='Circle4',
+            parent='Point4',
+            axis=(0, 1, 0),
+            radius=1 )
+
+# code for Circle5
+c = s.new_circle(name='Circle5',
+            parent='Point5',
+            axis=(0, 1, 0),
+            radius=1 )
+
+# code for Circle6
+c = s.new_circle(name='Circle6',
+            parent='Point6',
+            axis=(0, 1, 0),
+            radius=1 )
+
+# code for Circle7
+c = s.new_circle(name='Circle7',
+            parent='Point7',
+            axis=(0, 1, 0),
+            radius=1 )
+
+# code for Circle8
+c = s.new_circle(name='Circle8',
+            parent='Point8',
+            axis=(0, 1, 0),
+            radius=1 )
+
+# code for Circle9
+c = s.new_circle(name='Circle9',
+            parent='Point9',
+            axis=(0, 1, 0),
+            radius=1 )
+
+# code for Circle10
+c = s.new_circle(name='Circle10',
+            parent='Point10',
+            axis=(0, 1, 0),
+            radius=1 )
+
+# code for Circle11
+c = s.new_circle(name='Circle11',
+            parent='Point11',
+            axis=(0, 1, 0),
+            radius=1 )
+
+# code for Circle12
+c = s.new_circle(name='Circle12',
+            parent='Point12',
+            axis=(0, 1, 0),
+            radius=1 )
+
+# code for mid_visual
+s.new_visual(name='mid_visual',
+            parent='Mid_part',
+            path=r'res: revolving crane/r7000_hoist_mid.glb',
+            offset=(0, 0, -0.2), 
+            rotation=(0, 0, 90), 
+            scale=(1.15, 1, 1) )
+
+# code for Stem
+s.new_rigidbody(name='Stem',
+                mass=0,
+                cog=(0,
+                     0,
+                     0),
+                parent='Mid_part',
+           position=(0,
+                     0,
+                     -2),
+           rotation=(solved(-30),
+                     0,
+                     0),
+           fixed =(True, True, True, False, True, True),
+                )
+
+# code for crane-wire
+s.new_cable(name='crane-wire',
+            endA='start_point',
+            endB='Point25',
+            length=10,
+            EA=10000,
+            sheaves = ['Circle'])
+
+# code for crane-wire1
+s.new_cable(name='crane-wire1',
+            endA='Point14',
+            endB='Point26',
+            length=10,
+            EA=10000,
+            sheaves = ['Circle2'])
+
+# code for crane-wire2
+s.new_cable(name='crane-wire2',
+            endA='Point15',
+            endB='Point27',
+            length=10,
+            EA=10000,
+            sheaves = ['Circle3'])
+
+# code for crane-wire3
+s.new_cable(name='crane-wire3',
+            endA='Point16',
+            endB='Point28',
+            length=10,
+            EA=10000,
+            sheaves = ['Circle4'])
+
+# code for crane-wire4
+s.new_cable(name='crane-wire4',
+            endA='Point17',
+            endB='Point29',
+            length=10,
+            EA=10000,
+            sheaves = ['Circle5'])
+
+# code for crane-wire5
+s.new_cable(name='crane-wire5',
+            endA='Point18',
+            endB='Point30',
+            length=10,
+            EA=10000,
+            sheaves = ['Circle6'])
+
+# code for crane-wire6
+s.new_cable(name='crane-wire6',
+            endA='Point19',
+            endB='Point31',
+            length=10,
+            EA=10000,
+            sheaves = ['Circle7'])
+
+# code for crane-wire7
+s.new_cable(name='crane-wire7',
+            endA='Point20',
+            endB='Point32',
+            length=10,
+            EA=10000,
+            sheaves = ['Circle8'])
+
+# code for crane-wire8
+s.new_cable(name='crane-wire8',
+            endA='Point21',
+            endB='Point33',
+            length=10,
+            EA=10000,
+            sheaves = ['Circle9'])
+
+# code for crane-wire9
+s.new_cable(name='crane-wire9',
+            endA='Point22',
+            endB='Point34',
+            length=10,
+            EA=10000,
+            sheaves = ['Circle10'])
+
+# code for crane-wire10
+s.new_cable(name='crane-wire10',
+            endA='Point23',
+            endB='Point35',
+            length=10,
+            EA=10000,
+            sheaves = ['Circle11'])
+
+# code for crane-wire11
+s.new_cable(name='crane-wire11',
+            endA='Point24',
+            endB='Point36',
+            length=10,
+            EA=10000,
+            sheaves = ['Circle12'])
+
+# code for Swivel
+s.new_rigidbody(name='Swivel',
+                mass=100,
+                cog=(0,
+                     0,
+                     0),
+                parent='Stem',
+           position=(0,
+                     0,
+                     -1.27),
+           rotation=(0,
+                     0,
+                     solved(0)),
+           fixed =(True, True, True, True, True, False),
+                )
+
+# code for stem_visual
+s.new_visual(name='stem_visual',
+            parent='Stem',
+            path=r'res: revolving crane/r7000_hoist_stem.glb',
+            offset=(0, 0, 0), 
+            rotation=(0, 0, 90), 
+            scale=(1, 1, 1) )
+
+# code for Elevation
+s.new_point(name='Elevation',
+          parent='Swivel',
+          position=(0,
+                    0,
+                    -2))
+
+# code for Visual
+s.new_visual(name='Visual',
+            parent='Swivel',
+            path=r'res: revolving crane/r7000_hoist_prongs.glb',
+            offset=(0, 0, -0.05), 
+            rotation=(0, 0, 0), 
+            scale=(1, 1, 1) )
+
+# code for Frame
+s.new_frame(name='Frame',
+           parent='Swivel',
+           position=(0,
+                     1.3,
+                     -1),
+           rotation=(solved(0),
+                     0,
+                     0),
+           fixed =(True, True, True, False, True, True),
+            )
+
+# code for Frame2
+s.new_frame(name='Frame2',
+           parent='Swivel',
+           position=(0,
+                     -1.3,
+                     -1),
+           rotation=(solved(0),
+                     0,
+                     0),
+           fixed =(True, True, True, False, True, True),
+            )
+
+# code for Frame3
+s.new_frame(name='Frame3',
+           parent='Swivel',
+           position=(-1.3,
+                     0,
+                     -1),
+           rotation=(0,
+                     solved(0),
+                     0),
+           fixed =(True, True, True, True, False, True),
+            )
+
+# code for Frame4
+s.new_frame(name='Frame4',
+           parent='Swivel',
+           position=(1.3,
+                     0,
+                     -1),
+           rotation=(0,
+                     solved(0),
+                     0),
+           fixed =(True, True, True, True, False, True),
+            )
+
+# code for horn1
+s.new_point(name='horn1',
+          parent='Frame',
+          position=(0,
+                    0,
+                    -1.1))
+
+# code for horn2
+s.new_point(name='horn2',
+          parent='Frame2',
+          position=(0,
+                    0,
+                    -1.1))
+
+# code for horn3
+s.new_point(name='horn3',
+          parent='Frame3',
+          position=(0,
+                    0,
+                    -1.1))
+
+# code for horn4
+s.new_point(name='horn4',
+          parent='Frame4',
+          position=(0,
+                    0,
+                    -1.1))
+
+# code for Circle13
+c = s.new_circle(name='Circle13',
+            parent='horn1',
+            axis=(0, 1, 0),
+            radius=0.6 )
+
+# code for Circle14
+c = s.new_circle(name='Circle14',
+            parent='horn2',
+            axis=(0, 1, 0),
+            radius=0.6 )
+
+# code for Circle15
+c = s.new_circle(name='Circle15',
+            parent='horn3',
+            axis=(1, 0, 0),
+            radius=0.6 )
+
+# code for Circle16
+c = s.new_circle(name='Circle16',
+            parent='horn4',
+            axis=(1, 0, 0),
+            radius=0.6 )
+# Timeline
+t = TimeLine(s)
+s.t = t  # and register timeline in scene

@@ -1,0 +1,47 @@
+# Mast crane example
+#
+boom_hinge_x	0
+boom_hinge_z	7
+#
+*BoomPoints
+# name	x	y	z
+main	32.5	0	-0.5
+aux	34	0	-1
+
+#
+# ---- Weights and visuals (all optional)
+#
+# For extending crane booms: BoomBase is the part of the boom
+# that is connected to the crane hinge.
+# Boom is the part that shifts away from the hinge when extended
+#
+# Visuals are:
+# Name	resource	off-x	off-y	off-z	rot-x	rot-y	rot-z	scale-x	scale-y	scale-z
+
+*CraneVisuals
+top	res: mast crane/visuals/mast_top.glb	0	0	-11.5	0	0	0	0.7	0.7	0.7
+
+*CraneBaseVisuals
+base	res: mast crane/visuals/mast.glb	0	0	0	0	0	0	0.7	0.5	0.7
+
+*BoomVisuals
+boom_base	res: mast crane/visuals/craneboom_normal.glb	0	0	0	0	0	0	1	1	1
+
+*BoomBaseVisuals
+
+
+*JibVisuals
+
+
+*CraneWeights
+*CraneBaseWeights
+*BoomWeights
+*BoomBaseWeights
+*JibWeights
+
+*BeautyLines
+# Beauty Lines are lines that are added just for visual pleasure
+# From [Base	Slew	Boom	Jib]
+# To   [Base	Slew	Boom	Jib]
+# from  x1	y1	z1	TO      x2	y2	z2
+Base	0.4	0	30.9	Boom	34	0	1

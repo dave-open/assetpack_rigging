@@ -1,0 +1,62 @@
+# This is an example of a crane
+#
+boom_hinge_x	 0
+boom_hinge_z	 19
+# --- JIB (optional)
+#
+# jib_hinge_x	 42  # relative to boom
+# jib_hinge_z	 0   # relative to boom
+#
+*BoomPoints
+# name	  x  	 y 	 z
+main	26	0	0
+
+#
+#
+*JibPoints
+# name 	 x	 y	 z
+
+
+#
+# ---- Boom Extension
+#
+# extension_max	 20 # remove this line to prohibit extension
+#
+# ---- Weights and visuals (all optional)
+#
+# For extending crane booms: BoomBase is the part of the boom
+# that is connected to the crane hinge.
+# Boom is the part that shifts away from the hinge when extended
+#
+# Visuals are:
+# Name 	 	resource	 	off-x	 off-y	 off-z	 rot-x	 rot-y	 rot-z	 scale-x	 scale-y	 scale-z
+
+*CraneVisuals
+cabin	res: tub mounted crane/Cabin.glb	 0	0	4.12	   0	0	0	    1	1	1
+
+*CraneBaseVisuals
+base	 	res: tub mounted crane/Base.glb	 0	0	0	   0	0	0	    1	1	1
+
+*BoomVisuals
+
+*BoomBaseVisuals
+boom		res: tub mounted crane/Boom.glb	 0	0	0	   0	0	0	    1	 1	 1
+
+*JibVisuals
+
+*CraneWeights
+*CraneBaseWeights
+*BoomWeights
+*BoomBaseWeights
+*JibWeights
+
+*BeautyLines
+# Beauty Lines are lines that are added just for visual pleasure
+# From [Base, Slew, Boom, Jib]
+# To   [Base, Slew, Boom, Jib]
+# from  x1	y1	z1	TO      x2	y2	z2
+#Base	-4	0	7	Slew	-1.4	0	34.5
+Slew	1.0	1.7	34.2	Boom	51.2	1.9	0.3
+Slew	1.0	-1.7	34.2	Boom	51.2	-1.9	0.3
+
+

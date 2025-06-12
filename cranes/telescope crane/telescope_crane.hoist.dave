@@ -1,0 +1,417 @@
+
+
+# code for Hook
+s.new_rigidbody(name='Hook',
+                mass=1,
+                cog=(0,
+                     0,
+                     -1),
+           position=(0,
+                     0,
+                     -3),
+           rotation=(0,
+                     0,
+                     0),
+           fixed =(False, False, False, False, False, False),
+                )
+
+# code for crane-tip
+s.new_frame(name='crane-tip',
+           position=(-0.2,
+                     0,
+                     -0.6),
+           rotation=(0,
+                     0,
+                     0),
+           fixed =(True, True, True, True, True, True),
+            )
+
+# code for elevation
+s.new_point(name='elevation',
+          parent='Hook',
+          position=(0,
+                    0,
+                    -1.4))
+
+# code for Visual
+s.new_visual(name='Visual',
+            parent='Hook',
+            path=r'res: telescope crane/Hook.glb',
+            offset=(0, 0, 0), 
+            rotation=(0, 0, 0), 
+            scale=(1, 1, 1) )
+
+# code for crane-tip_2
+s.new_point(name='crane-tip_2',
+          parent='Hook',
+          position=(0,
+                    0,
+                    0))
+
+# code for Disc_1p
+s.new_point(name='Disc_1p',
+          parent='Hook',
+          position=(0,
+                    -0.15,
+                    0))
+
+# code for Disc_2p
+s.new_point(name='Disc_2p',
+          parent='Hook',
+          position=(0,
+                    -0.075,
+                    0))
+
+# code for Disc_4p
+s.new_point(name='Disc_4p',
+          parent='Hook',
+          position=(0,
+                    0.075,
+                    0))
+
+# code for Disc_5p
+s.new_point(name='Disc_5p',
+          parent='Hook',
+          position=(0,
+                    0.15,
+                    0))
+
+# code for horn
+s.new_point(name='horn',
+          parent='Hook',
+          position=(0,
+                    0,
+                    -1.4))
+
+# code for winch_disc_1p
+s.new_point(name='winch_disc_1p',
+          parent='crane-tip',
+          position=(-19.0,
+                    -0.23,
+                    1.75))
+
+# code for winch_disc_2p
+s.new_point(name='winch_disc_2p',
+          parent='crane-tip',
+          position=(-19.0,
+                    0.23,
+                    1.75))
+
+# code for lower_disc_middlep
+s.new_point(name='lower_disc_middlep',
+          parent='crane-tip',
+          position=(-0.00122517,
+                    0,
+                    -0.0291045))
+
+# code for front_disc_p
+s.new_point(name='front_disc_p',
+          parent='crane-tip',
+          position=(0.705814,
+                    0,
+                    0.4945))
+
+# code for lower_disc_1p
+s.new_point(name='lower_disc_1p',
+          parent='crane-tip',
+          position=(-0.00122517,
+                    -0.23,
+                    -0.0291045))
+
+# code for lower_disc_2p
+s.new_point(name='lower_disc_2p',
+          parent='crane-tip',
+          position=(-0.00122517,
+                    -0.15,
+                    -0.0291045))
+
+# code for upper_disc_1p
+s.new_point(name='upper_disc_1p',
+          parent='crane-tip',
+          position=(0,
+                    -0.23,
+                    1.25))
+
+# code for lower_disc_3p
+s.new_point(name='lower_disc_3p',
+          parent='crane-tip',
+          position=(-0.00122517,
+                    -0.08,
+                    -0.0291045))
+
+# code for lower_disc_4p
+s.new_point(name='lower_disc_4p',
+          parent='crane-tip',
+          position=(-0.00122517,
+                    0.08,
+                    -0.0291045))
+
+# code for lower_disc_5p
+s.new_point(name='lower_disc_5p',
+          parent='crane-tip',
+          position=(-0.00122517,
+                    0.16,
+                    -0.0291045))
+
+# code for lower_disc_6p
+s.new_point(name='lower_disc_6p',
+          parent='crane-tip',
+          position=(-0.00122517,
+                    0.23,
+                    -0.0291045))
+
+# code for upper_disc_3p
+s.new_point(name='upper_disc_3p',
+          parent='crane-tip',
+          position=(0,
+                    0.23,
+                    1.25))
+
+# code for upper_disc_2p
+s.new_point(name='upper_disc_2p',
+          parent='crane-tip',
+          position=(0,
+                    0.3,
+                    1.25))
+
+# code for Circle2
+c = s.new_circle(name='Circle2',
+            parent='elevation',
+            axis=(1, 0, 0),
+            radius=0.12 )
+
+# code for Disc_3c
+c = s.new_circle(name='Disc_3c',
+            parent='crane-tip_2',
+            axis=(0, 1, 0),
+            radius=0.237 )
+
+# code for Disc_1c
+c = s.new_circle(name='Disc_1c',
+            parent='Disc_1p',
+            axis=(0, 1, 0),
+            radius=0.237 )
+
+# code for Disc_2c
+c = s.new_circle(name='Disc_2c',
+            parent='Disc_2p',
+            axis=(0, 1, 0),
+            radius=0.237 )
+
+# code for Disc_4c
+c = s.new_circle(name='Disc_4c',
+            parent='Disc_4p',
+            axis=(0, 1, 0),
+            radius=0.237 )
+
+# code for Disc_5c
+c = s.new_circle(name='Disc_5c',
+            parent='Disc_5p',
+            axis=(0, 1, 0),
+            radius=0.237 )
+
+# code for horn_disc
+c = s.new_circle(name='horn_disc',
+            parent='horn',
+            axis=(1, 0, 0),
+            radius=0.13 )
+
+# code for winch_disc_1c
+c = s.new_circle(name='winch_disc_1c',
+            parent='winch_disc_1p',
+            axis=(0, 1, 0),
+            radius=0.3 )
+c.draw_start = 0.03
+
+# code for winch_disc_2c
+c = s.new_circle(name='winch_disc_2c',
+            parent='winch_disc_2p',
+            axis=(0, 1, 0),
+            radius=0.3 )
+c.draw_start = 0.03
+
+# code for lower_disc_middlec
+c = s.new_circle(name='lower_disc_middlec',
+            parent='lower_disc_middlep',
+            axis=(0, 1, 0),
+            radius=0.24 )
+c.draw_start = 0.03
+
+# code for front_disc_c
+c = s.new_circle(name='front_disc_c',
+            parent='front_disc_p',
+            axis=(0, 1, 0),
+            radius=0.24 )
+c.draw_start = 0.03
+
+# code for lower_disc_1c
+c = s.new_circle(name='lower_disc_1c',
+            parent='lower_disc_1p',
+            axis=(0, 1, 0),
+            radius=0.24 )
+c.draw_start = 0.03
+
+# code for lower_disc_2c
+c = s.new_circle(name='lower_disc_2c',
+            parent='lower_disc_2p',
+            axis=(0, 1, 0),
+            radius=0.24 )
+c.draw_start = 0.03
+
+# code for upper_disc_1c
+c = s.new_circle(name='upper_disc_1c',
+            parent='upper_disc_1p',
+            axis=(0, 1, 0),
+            radius=0.24 )
+c.draw_start = 0.03
+
+# code for lower_disc_3c
+c = s.new_circle(name='lower_disc_3c',
+            parent='lower_disc_3p',
+            axis=(0, 1, 0),
+            radius=0.24 )
+c.draw_start = 0.03
+
+# code for lower_disc_4c
+c = s.new_circle(name='lower_disc_4c',
+            parent='lower_disc_4p',
+            axis=(0, 1, 0),
+            radius=0.24 )
+c.draw_start = 0.03
+
+# code for lower_disc_5c
+c = s.new_circle(name='lower_disc_5c',
+            parent='lower_disc_5p',
+            axis=(0, 1, 0),
+            radius=0.24 )
+c.draw_start = 0.03
+
+# code for lower_disc_6c
+c = s.new_circle(name='lower_disc_6c',
+            parent='lower_disc_6p',
+            axis=(0, 1, 0),
+            radius=0.24 )
+c.draw_start = 0.03
+
+# code for upper_disc_3c
+c = s.new_circle(name='upper_disc_3c',
+            parent='upper_disc_3p',
+            axis=(0, 1, 0),
+            radius=0.24 )
+c.draw_start = 0.03
+
+# code for upper_disc_2c
+c = s.new_circle(name='upper_disc_2c',
+            parent='upper_disc_2p',
+            axis=(0, 1, 0),
+            radius=0.24 )
+c.draw_start = 0.03
+
+# code for crane-wire
+s.new_cable(name='crane-wire',
+            endA='winch_disc_1c',
+            endB='winch_disc_2c',
+            length=58.2422,
+            EA=1000.0,
+            sheaves = ['upper_disc_1c',
+                       'lower_disc_1c',
+                       'Disc_1c',
+                       'lower_disc_middlec',
+                       'Disc_5c',
+                       'lower_disc_6c',
+                       'upper_disc_3c'])
+s['crane-wire'].reversed = (False, False, False, False, False, False, False, True, True)
+
+s['Hook']._visible = False
+
+s['elevation']._visible = False
+
+s['crane-tip_2']._visible = False
+
+s['Disc_1p']._visible = False
+
+s['Disc_2p']._visible = False
+
+s['Disc_4p']._visible = False
+
+s['Disc_5p']._visible = False
+
+s['horn']._visible = False
+
+s['winch_disc_1p']._visible = False
+
+s['winch_disc_2p']._visible = False
+
+s['lower_disc_middlep']._visible = False
+
+s['front_disc_p']._visible = False
+
+s['lower_disc_1p']._visible = False
+
+s['lower_disc_2p']._visible = False
+
+s['upper_disc_1p']._visible = False
+
+s['lower_disc_3p']._visible = False
+
+s['lower_disc_4p']._visible = False
+
+s['lower_disc_5p']._visible = False
+
+s['lower_disc_6p']._visible = False
+
+s['upper_disc_3p']._visible = False
+
+s['upper_disc_2p']._visible = False
+
+s['Circle2']._visible = False
+
+s['Disc_3c']._visible = False
+
+s['Disc_1c']._visible = False
+
+s['Disc_2c']._visible = False
+
+s['Disc_4c']._visible = False
+
+s['Disc_5c']._visible = False
+
+s['winch_disc_1c']._visible = False
+
+s['winch_disc_2c']._visible = False
+
+s['lower_disc_middlec']._visible = False
+
+s['front_disc_c']._visible = False
+
+s['lower_disc_1c']._visible = False
+
+s['lower_disc_2c']._visible = False
+
+s['upper_disc_1c']._visible = False
+
+s['lower_disc_3c']._visible = False
+
+s['lower_disc_4c']._visible = False
+
+s['lower_disc_5c']._visible = False
+
+s['lower_disc_6c']._visible = False
+
+s['upper_disc_3c']._visible = False
+
+s['upper_disc_2c']._visible = False
+
+# Limits
+
+# Watches
+
+# Tags
+
+# - tags are added with 'try_add_tags' because the node may not exist anymore (eg changed components) wh
+
+# Colors
+s._try_add_color('crane-wire',(103, 103, 103))
+# Timeline
+t = TimeLine(s)
+s.t = t  # and register timeline in scene

@@ -1,0 +1,53 @@
+# Revolving crane; loosely based on S7000
+
+boom_hinge_x	 13.9
+boom_hinge_z	 22.5
+
+*BoomPoints
+# name	  x  	 y 	 z
+main	120	0	0
+
+# *JibPoints
+
+# ---- Weights and visuals (all optional)
+#
+# For extending crane booms: BoomBase is the part of the boom
+# that is connected to the crane hinge.
+# Boom is the part that shifts away from the hinge when extended
+#
+# Visuals are:
+# Name 	 	resource	 	off-x	 off-y	 off-z	 rot-x	 rot-y	 rot-z	 scale-x	 scale-y	 scale-z
+
+*CraneVisuals
+base	 	res: revolving crane/base.glb	 0	0	0	   0	0	0	    1	1	1
+
+*CraneBaseVisuals
+
+*BoomVisuals
+
+*BoomBaseVisuals
+boom	 	res: revolving crane/boom.glb	 0	0	0	   0	0	0	    1	1	1
+
+*JibVisuals
+
+*CraneWeights
+*CraneBaseWeights
+*BoomWeights
+*BoomBaseWeights
+# *JibWeights
+
+*BeautyLines
+# Beauty Lines are lines that are added just for visual pleasure
+# From [Base, Slew, Boom, Jib]
+# To   [Base, Slew, Boom, Jib]
+# from  x1	y1	z1		TO      x2	y2	z2
+Slew	-18.0	-1.0	78.0	Boom	118.6	-1.0	3.0
+Slew	-18	-2	78	Boom	118.6	-2	3
+Slew	-18	-3	78	Boom	118.6	-3	3
+Slew	-18	-4	78	Boom	118.6	-4	3
+Slew	-18	0	78	Boom	118.6	0	3
+Slew	-18	1	78	Boom	118.6	1	3
+Slew	-18	2	78	Boom	118.6	2	3
+Slew	-18	3	78	Boom	118.6	3	3
+Slew	-18	4	78	Boom	118.6	4	3
+	

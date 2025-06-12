@@ -1,0 +1,46 @@
+# Crawler crane
+#
+boom_hinge_x	 1.35
+boom_hinge_z	 2.45
+
+*BoomPoints
+# name	  x  	 y 	 z
+main	   46 	 0 	 -0.45
+
+*JibPoints
+
+# ---- Weights and visuals (all optional)
+#
+# For extending crane booms: BoomBase is the part of the boom
+# that is connected to the crane hinge.
+# Boom is the part that shifts away from the hinge when extended
+#
+# Visuals are:
+# Name 	 	resource	 	off-x	 off-y	 off-z	 rot-x	 rot-y	 rot-z	 scale-x	 scale-y	 scale-z
+
+*CraneVisuals
+slew_ring	res: crawler crane/top_and_cabin.glb	 0	0	0	   0	0	0	    1	1	1
+*CraneBaseVisuals
+base	 	res: crawler crane/base.glb	 0	0	0	   0	0	0	    1	1	1
+
+*BoomVisuals
+
+*BoomBaseVisuals
+boom	 	res: crawler crane/boom.glb	 0	0	0	   0	0	0	    1	1	1
+
+*JibVisuals
+
+*CraneWeights
+*CraneBaseWeights
+*BoomWeights
+*BoomBaseWeights
+*JibWeights
+
+*BeautyLines
+# Beauty Lines are lines that are added just for visual pleasure
+# From [Base, Slew, Boom, Jib]
+# To   [Base, Slew, Boom, Jib]
+# from  x1	y1	z1		TO      x2	y2	z2
+Slew	-3.41	0.93	13	Boom	45	0.65	1
+Slew	-3.41	-0.93	13	Boom	45	-0.65	1
+

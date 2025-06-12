@@ -1,0 +1,232 @@
+# auto generated python code
+# By MS12H
+# Time: 2025-02-18 17:37:51 UTC
+
+# To be able to distinguish the important number (eg: fixed positions) from
+# non-important numbers (eg: a position that is solved by the static solver) we use a dummy-function called 'solved'.
+# For anything written as solved(number) that actual number does not influence the static solution
+
+def solved(number):
+    return number
+
+
+# Environment settings
+s.g = 9.80665
+s.waterlevel = 0.0
+s.rho_air = 0.00126
+s.rho_water = 1.025
+s.wind_direction = 0.0
+s.wind_velocity = 0.0
+s.current_direction = 0.0
+s.current_velocity = 0.0
+
+
+
+# code for crane-tip
+s.new_frame(name='crane-tip',
+           position=(0,
+                     0,
+                     0),
+           rotation=(0,
+                     0,
+                     0),
+           fixed =(True, True, True, True, True, True),
+            )
+
+# code for Hook
+s.new_rigidbody(name='Hook',
+                mass=100,
+                cog=(0,
+                     0,
+                     -0.5),
+           position=(solved(-0.013954761288029027),
+                     solved(-0.07611989264760688),
+                     solved(-7.175100251045511)),
+           rotation=(solved(0.0109199),
+                     solved(-0.0151067),
+                     solved(7.09824)),
+           fixed =(False, False, False, False, False, False),
+                )
+
+# code for Point
+s.new_point(name='Point',
+          parent='crane-tip',
+          position=(0,
+                    0.4,
+                    0))
+
+# code for Point2
+s.new_point(name='Point2',
+          parent='crane-tip',
+          position=(0,
+                    -0.4,
+                    0))
+
+# code for start_point
+s.new_point(name='start_point',
+          parent='crane-tip',
+          position=(-45.016,
+                    0,
+                    1.056))
+
+# code for Point7
+s.new_point(name='Point7',
+          parent='crane-tip',
+          position=(0,
+                    0,
+                    0))
+
+# code for Point9
+s.new_point(name='Point9',
+          parent='crane-tip',
+          position=(-0.4,
+                    0,
+                    1))
+
+# code for Point5
+s.new_point(name='Point5',
+          parent='Hook',
+          position=(0,
+                    0.35,
+                    0))
+
+# code for Visual
+s.new_visual(name='Visual',
+            parent='Hook',
+            path=r'res: crawler crane/hook.glb',
+            offset=(0, 0, 0), 
+            rotation=(0, 0, 0), 
+            scale=(1, 1, 1) )
+
+# code for Point6
+s.new_point(name='Point6',
+          parent='Hook',
+          position=(0,
+                    -0.35,
+                    0))
+
+# code for Point8
+s.new_point(name='Point8',
+          parent='Hook',
+          position=(0,
+                    0,
+                    0))
+
+# code for Frame2
+s.new_frame(name='Frame2',
+           parent='Hook',
+           position=(0,
+                     0.242,
+                     -0.827),
+           rotation=(solved(0),
+                     0,
+                     0),
+           fixed =(True, True, True, False, True, True),
+            )
+
+# code for Frame3
+s.new_frame(name='Frame3',
+           parent='Hook',
+           position=(0,
+                     -0.242,
+                     -0.827),
+           rotation=(solved(0),
+                     0,
+                     0),
+           fixed =(True, True, True, False, True, True),
+            )
+
+# code for elevation
+s.new_point(name='elevation',
+          parent='Hook',
+          position=(0,
+                    0,
+                    -1))
+
+# code for _Circle
+c = s.new_circle(name='_Circle',
+            parent='Point',
+            axis=(0, 1, 0),
+            radius=0.3 )
+
+# code for _Circle2
+c = s.new_circle(name='_Circle2',
+            parent='Point2',
+            axis=(0, 1, 0),
+            radius=0.3 )
+
+# code for _Circle7
+c = s.new_circle(name='_Circle7',
+            parent='Point7',
+            axis=(0, 1, 0),
+            radius=0.3 )
+
+# code for _Circle5
+c = s.new_circle(name='_Circle5',
+            parent='Point5',
+            axis=(0, 1, 0),
+            radius=0.3 )
+
+# code for _Circle6
+c = s.new_circle(name='_Circle6',
+            parent='Point6',
+            axis=(0, 1, 0),
+            radius=0.3 )
+
+# code for _Circle8
+c = s.new_circle(name='_Circle8',
+            parent='Point8',
+            axis=(0, 1, 0),
+            radius=0.3 )
+
+# code for horn1
+s.new_point(name='horn1',
+          parent='Frame2',
+          position=(0,
+                    0,
+                    -0.2))
+
+# code for horn2
+s.new_point(name='horn2',
+          parent='Frame3',
+          position=(0,
+                    0,
+                    -0.2))
+
+# code for crane-wire
+s.new_cable(name='crane-wire',
+            endA='start_point',
+            endB='Point9',
+            length=94.283,
+            EA=1000000.0,
+            sheaves = ['_Circle',
+                       '_Circle5',
+                       '_Circle7',
+                       '_Circle8',
+                       '_Circle2',
+                       '_Circle6'])
+
+# code for horn_surface
+c = s.new_circle(name='horn_surface',
+            parent='horn1',
+            axis=(0, 1, 0),
+            radius=0.08 )
+
+# code for horn_surface2
+c = s.new_circle(name='horn_surface2',
+            parent='horn2',
+            axis=(0, 1, 0),
+            radius=0.08 )
+
+# Limits
+
+# Watches
+
+# Tags
+
+# - tags are added with 'try_add_tags' because the node may not exist anymore (eg changed components) wh
+
+# Colors
+# Timeline
+t = TimeLine(s)
+s.t = t  # and register timeline in scene

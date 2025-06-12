@@ -1,0 +1,43 @@
+# auto generated python code
+# By Ekin
+# Time: 2025-04-14 10:35:29 UTC
+
+# To be able to distinguish the important number (eg: fixed positions) from
+# non-important numbers (eg: a position that is solved by the static solver) we use a dummy-function called 'solved'.
+# For anything written as solved(number) that actual number does not influence the static solution
+
+def solved(number):
+    return number
+
+
+# Environment settings
+s.g = 9.80665
+s.waterlevel = 0.0
+s.rho_air = 0.00126
+s.rho_water = 1.025
+s.wind_direction = 0.0
+s.wind_velocity = 0.0
+s.current_direction = 0.0
+s.current_velocity = 0.0
+
+
+
+this_crane = Crane(s, name = "crane")
+this_crane.path = r"res: tower crane/tower.crane.csv"
+this_crane.position = (0.0,0.0,0.0)
+this_crane.rotation = (0.0,0.0,0.0)
+this_crane.fixed = (True,True,True,True,True,True)
+this_crane.auto_slew = False
+this_crane.slew = 0.000
+this_crane.boom_extension = 0.000
+this_crane.boom_angle = 0.000
+
+# Limits
+
+# Watches
+
+# Tags
+
+# - tags are added with 'try_add_tags' because the node may not exist anymore (eg changed components) wh
+
+# Colors
